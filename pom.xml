@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.tikal.jee.sample</groupId>
     <artifactId>petcatalog</artifactId>
@@ -7,7 +8,7 @@
     <properties>
         <server.deploy.dir>UTF-8</server.deploy.dir>
     </properties>
-    
+
     <dependencies>
         <dependency>
             <groupId>javax</groupId>
@@ -20,16 +21,31 @@
             <groupId>org.glassfish.main.extras</groupId>
             <artifactId>glassfish-embedded-web</artifactId>
             <version>4.0</version>
-        </dependency>	
-        
-		<!-- JDBC Driver -->
+        </dependency>
+        <!-- JDBC Driver -->
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <version>9.3-1101-jdbc41</version>
         </dependency>
+        <!-- ICEfaces -->
+        <dependency>
+            <groupId>org.icefaces</groupId>
+            <artifactId>icefaces</artifactId>
+            <version>3.3.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.icefaces</groupId>
+            <artifactId>icefaces-ace</artifactId>
+            <version>3.3.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.icefaces</groupId>
+            <artifactId>icefaces-compat</artifactId>
+            <version>3.3.0</version>
+        </dependency>
     </dependencies>
-    
+
     <build>
         <finalName>catalog</finalName>
         <plugins>
@@ -57,10 +73,20 @@
             </plugin>
         </plugins>
     </build>
-	<repositories>
+    <repositories>
         <repository>
             <id>java.net</id>
             <url>http://download.java.net/maven/glassfish</url>
+        </repository>
+        <repository>
+            <id>prime-repo</id>
+            <name>PrimeFaces Maven Repository</name>
+            <url>http://repository.primefaces.org</url>
+            <layout>default</layout>
+        </repository>
+        <repository>
+            <id>icefaces</id>
+            <url>http://anonsvn.icefaces.org/repo/maven2/releases/</url>
         </repository>
     </repositories>
     <pluginRepositories>
