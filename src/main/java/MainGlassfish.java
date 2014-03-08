@@ -47,15 +47,17 @@ public class MainGlassfish {
 
         if (null != dbUrl) {
             System.out.println("------db url: " + dbUrl);
-            Matcher matcher = Pattern.compile("postgres://(.*):(.*)@(.*)/(.*)").matcher(dbUrl);
+            Matcher matcher = Pattern.compile("postgres://(.*):(.*)@(.*):(.*)/(.*)").matcher(dbUrl);
             matcher.find();
 
             String host = matcher.group(3);
-            String database = matcher.group(4);
+            String port = matcher.group(4);
+            String database = matcher.group(5);
             String user = matcher.group(1);
             String password = matcher.group(2);
 
-            properties = "user=" + user + ":password=" + password + ":databasename=" + database + ":loglevel=4:servername=" + host;
+            properties = "user=" + user + ":password=" + password + ":databasename=" + database +
+                    ":loglevel=4:servername=" + host + ":port=" + port;
         } else {
             InputStream inputStream = MainGlassfish.class.getResourceAsStream("database.properties");
             Properties prop = new Properties();
