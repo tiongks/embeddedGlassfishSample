@@ -34,45 +34,50 @@
  holder.
 -->
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:p="http://primefaces.org/ui">
-    <h:head>
-        <title>Show Detail</title>
+<h:head>
+    <title>Show Detail</title>
 
-    </h:head>
-    <h:body>
-        <table style="text-align: left; width: 100%;" border="0" >
-            <tbody>
-                <tr>
-                    <td>
-                        <h2>#{msgs.Title}</h2>
-                    </td>
-                    <td>
-                        <p:graphicImage library="images" name="banner_logo.gif" style="width: 65px; height: 55px;" align="right" />
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <h:form>
-            <h:outputStylesheet name="css/styles.css"/>
-            <h:panelGrid columns="2" border="0" >
-                <p:outputLabel value="#{msgs.Name}:"/>
-                <p:outputLabel value="#{catalog.item.name}" title="Name" />
-                <p:outputLabel value="#{msgs.Description}:"/>
-                <p:outputLabel value="#{catalog.item.description}" title="Description" />
-                <p:outputLabel value="#{msgs.Photo}:"/>
-                <p:graphicImage library="images" name="#{catalog.item.imageurl}" title="Imageurl" />
-                <p:outputLabel value="#{msgs.Price}:"/>
-                <p:outputLabel value="#{catalog.item.price}" title="Price" />
-                
-            </h:panelGrid>
-            <h:commandButton id="back" value="Back" action="list"/>
-        </h:form>
+</h:head>
+<h:body>
+    <table style="text-align: left; width: 100%;" border="0">
+        <tbody>
+        <tr>
+            <td>
+                <h2>#{msgs.Title}</h2>
+            </td>
+            <td>
+                <p:graphicImage library="images" name="banner_logo.gif" style="width: 65px; height: 55px;"
+                                align="right"/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">Source code for this is in <a href="https://github.com/tiongks/embeddedGlassfishSample/tree/primefaces-glassfish-4">Github.</a></td>
+        </tr>
+        </tbody>
+    </table>
+    <h:form>
+        <h:outputStylesheet name="css/styles.css"/>
+        <h:panelGrid columns="2" border="0">
+            <p:outputLabel value="#{msgs.Name}:"/>
+            <p:outputLabel value="#{catalog.item.name}" title="Name"/>
+            <p:outputLabel value="#{msgs.Description}:"/>
+            <p:outputLabel value="#{catalog.item.description}" title="Description"/>
+            <p:outputLabel value="#{msgs.Photo}:"/>
+            <p:graphicImage library="images" name="#{catalog.item.imageurl}" title="Imageurl"/>
+            <p:outputLabel value="#{msgs.Price}:"/>
+            <p:outputLabel value="#{catalog.item.price}" title="Price"/>
+
+        </h:panelGrid>
+        <h:commandButton id="back" value="Back" action="list"/>
+    </h:form>
 
 
-    </h:body>
+</h:body>
 </html>  
