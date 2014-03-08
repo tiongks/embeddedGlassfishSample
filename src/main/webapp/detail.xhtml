@@ -38,7 +38,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core">
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
     <h:head>
         <title>Show Detail</title>
 
@@ -47,10 +48,11 @@
         <table style="text-align: left; width: 100%;" border="0" >
             <tbody>
                 <tr>
-                    <td><h2>#{msgs.Title}</h2>
+                    <td>
+                        <h2>#{msgs.Title}</h2>
                     </td>
                     <td>
-                        <h:graphicImage library="images" name="banner_logo.gif" style="width: 65px; height: 55px;" align="right" />    
+                        <p:graphicImage library="images" name="banner_logo.gif" style="width: 65px; height: 55px;" align="right" />
                     </td>
                 </tr>
             </tbody>
@@ -58,14 +60,14 @@
         <h:form>
             <h:outputStylesheet name="css/styles.css"/>
             <h:panelGrid columns="2" border="0" >
-                <h:outputText value="#{msgs.Name}:"/>
-                <h:outputText value="#{catalog.item.name}" title="Name" />
-                <h:outputText value="#{msgs.Description}:"/>
-                <h:outputText value="#{catalog.item.description}" title="Description" />
-                <h:outputText value="#{msgs.Photo}:"/>
-                <h:graphicImage library="images" name="#{catalog.item.imageurl}" title="Imageurl" />
-                <h:outputText value="#{msgs.Price}:"/>
-                <h:outputText value="#{catalog.item.price}" title="Price" />
+                <p:outputLabel value="#{msgs.Name}:"/>
+                <p:outputLabel value="#{catalog.item.name}" title="Name" />
+                <p:outputLabel value="#{msgs.Description}:"/>
+                <p:outputLabel value="#{catalog.item.description}" title="Description" />
+                <p:outputLabel value="#{msgs.Photo}:"/>
+                <p:graphicImage library="images" name="#{catalog.item.imageurl}" title="Imageurl" />
+                <p:outputLabel value="#{msgs.Price}:"/>
+                <p:outputLabel value="#{catalog.item.price}" title="Price" />
                 
             </h:panelGrid>
             <h:commandButton id="back" value="Back" action="list"/>
