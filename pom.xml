@@ -28,21 +28,11 @@
             <artifactId>postgresql</artifactId>
             <version>9.3-1101-jdbc41</version>
         </dependency>
-        <!-- ICEfaces -->
+        <!-- PrimeFaces -->
         <dependency>
-            <groupId>org.icefaces</groupId>
-            <artifactId>icefaces</artifactId>
-            <version>3.3.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.icefaces</groupId>
-            <artifactId>icefaces-ace</artifactId>
-            <version>3.3.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.icefaces</groupId>
-            <artifactId>icefaces-compat</artifactId>
-            <version>3.3.0</version>
+            <groupId>org.primefaces</groupId>
+            <artifactId>primefaces</artifactId>
+            <version>4.0</version>
         </dependency>
     </dependencies>
 
