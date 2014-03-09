@@ -54,6 +54,7 @@
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>*.jsf</url-pattern>
         <url-pattern>/app/*</url-pattern>
+        <url-pattern>*.xhtml</url-pattern>
     </servlet-mapping>
     <context-param>
         <description>State saving method: 'client' or 'server' (=default). See JSF Specification 2.5.2</description>
@@ -103,7 +104,7 @@
         <mime-type>image/png</mime-type>
     </mime-mapping>
     <welcome-file-list>
-        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>index.xhtml</welcome-file>
     </welcome-file-list>
    
 </web-app>
