@@ -29,6 +29,7 @@
             <version>9.3-1101-jdbc41</version>
         </dependency>
         <!-- Myfaces -->
+        <!-- There's an issue when Myfaces and Stateless Session Beans in Embedded Glassfish
         <dependency>
             <groupId>org.apache.myfaces.core</groupId>
             <artifactId>myfaces-api</artifactId>
@@ -39,6 +40,7 @@
             <artifactId>myfaces-impl</artifactId>
             <version>2.2.1</version>
         </dependency>
+        -->
         <!-- PrimeFaces -->
         <dependency>
             <groupId>org.primefaces</groupId>
